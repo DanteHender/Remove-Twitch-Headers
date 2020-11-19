@@ -1,0 +1,14 @@
+  {
+    "name": "Remove Twitch Headers",
+    "version": "1.2",
+    "description": "Removes the \"Following\" and \"Browse\" headers on their respective Twitch pages",
+	"content_scripts": [
+		{
+			"matches": ["https://www.twitch.tv/directory", "https://www.twitch.tv/directory/following"],
+			"js": ["main.js"],
+			"run_at": "document_end",
+			"all_frames": false
+		}
+	],
+    "manifest_version": 2
+  }
