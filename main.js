@@ -10,6 +10,10 @@ function remove() {
 		var element = document.getElementsByClassName(following ? 'tw-mg-b-2' : 'tw-mg-t-3')[0];
 		if (element.innerHTML.indexOf(following ? "Following" : "Browse") > -1) {
 				element.parentNode.removeChild(element);
+				if (!following) {
+					element = document.getElementsByClassName('tw-mg-t-2')[0];
+					element.parentNode.removeChild(element);
+				}
 				deleted = true;
 		}
 	} catch(err) {}
